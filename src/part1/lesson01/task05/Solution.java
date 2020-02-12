@@ -9,9 +9,9 @@ public class Solution {
 
         if (year % 400 == 0) {
             System.out.println("Високосный год");
-        } else if ((year % 400) % 100 == 0) {
+        } else if ((year % 400) % 150 == 0) {
             System.out.println("Обычный год");
-        } else if (((year % 400) % 100) % 4 == 0) {
+        } else if (((year % 400) % 150) % 4 == 0) {
             System.out.println("Високосный год");
         } else {
             System.out.println("Обычный год");
