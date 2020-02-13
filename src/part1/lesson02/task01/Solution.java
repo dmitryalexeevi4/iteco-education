@@ -9,23 +9,26 @@ public class Solution {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-
+        menu();
         System.out.println("Внесите сумму: ");
         int insertedMoney = scanner.nextInt();
         if (insertedMoney > 0) {
             System.out.println("Вы внесли: " + insertedMoney);
         }
         System.out.println("Выберите номер напитка: ");
-        menu();
+
         int itemNumber = scanner.nextInt();
 
         result(itemNumber,insertedMoney);
     }
 
     public static void menu() {
+        System.out.println("----------------");
+        System.out.println("    \"Меню\"    ");
         System.out.println(number[0] + ". " + drinks[0] + " - " + price[0]);
         System.out.println(number[1] + ". " + drinks[1] + " - " + price[1]);
         System.out.println(number[2] + ". " + drinks[2] + " - " + price[2]);
+        System.out.println("----------------");
     }
 
     public static void result(int itemNumber, int insertedMoney) {
