@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class Solution {
 
-   public static String[] drinks = {"Fanta", "Sprite", "Coca-Cola"};
-   public static int[] number = {1, 2, 3}, price = {40, 50, 60};
+   public static String[] drink = {"Fanta", "Sprite", "Coca-Cola"};
+   public static int[] drinkNumber = {1, 2, 3}, drinkPrice = {40, 50, 60};
 
     public static void main(String[] args) {
 
@@ -25,32 +25,32 @@ public class Solution {
     public static void menu() {
         System.out.println("----------------");
         System.out.println("    \"Меню\"    ");
-        System.out.println(number[0] + ". " + drinks[0] + " - " + price[0]);
-        System.out.println(number[1] + ". " + drinks[1] + " - " + price[1]);
-        System.out.println(number[2] + ". " + drinks[2] + " - " + price[2]);
+        System.out.println(drinkNumber[0] + ". " + drink[0] + " - " + drinkPrice[0]);
+        System.out.println(drinkNumber[1] + ". " + drink[1] + " - " + drinkPrice[1]);
+        System.out.println(drinkNumber[2] + ". " + drink[2] + " - " + drinkPrice[2]);
         System.out.println("----------------");
     }
 
-    public static void result(int itemNumber, int insertedMoney) {
-        if (itemNumber == number[0] & insertedMoney >= price[0]) {
-            System.out.println("Спасибо за покупку, ваша сдача: " + (insertedMoney - price[0]));
-        } else if (itemNumber == number[0] & insertedMoney < price[0]) {
-            System.out.println("Недостаточно средств, пополните счет на: " + (price[0] - insertedMoney));
+    public static void result(int number, int price) {
+        if (number == drinkNumber[0] & price >= drinkPrice[0]) {
+            System.out.println("Спасибо за покупку, ваша сдача: " + (price - drinkPrice[0]));
+        } else if (number == drinkNumber[0] & price < drinkPrice[0]) {
+            System.out.println("Недостаточно средств, пополните счет на: " + (drinkPrice[0] - price));
         }
 
-        if (itemNumber == number[1] & insertedMoney >= price[1]) {
-            System.out.println("Спасибо за покупку, ваша сдача: " + (insertedMoney - price[1]));
-        } else if (itemNumber == number[1] & insertedMoney < price[1]) {
-            System.out.println("Недостаточно средств, пополните счет на: " + (price[1] - insertedMoney));
+        if (number == drinkNumber[1] & price >= drinkPrice[1]) {
+            System.out.println("Спасибо за покупку, ваша сдача: " + (price - drinkPrice[1]));
+        } else if (number == drinkNumber[1] & price < drinkPrice[1]) {
+            System.out.println("Недостаточно средств, пополните счет на: " + (drinkPrice[1] - price));
         }
 
-        if (itemNumber == number[2] & insertedMoney >= price[2]) {
-            System.out.println("Спасибо за покупку, ваша сдача: " + (insertedMoney - price[2]));
-        } else if (itemNumber == number[2] & insertedMoney < price[2]) {
-            System.out.println("Недостаточно средств, пополните счет на: " + (price[2] - insertedMoney));
+        if (number == drinkNumber[2] & price >= drinkPrice[2]) {
+            System.out.println("Спасибо за покупку, ваша сдача: " + (price - drinkPrice[2]));
+        } else if (number == drinkNumber[2] & price < drinkPrice[2]) {
+            System.out.println("Недостаточно средств, пополните счет на: " + (drinkPrice[2] - price));
         }
 
-        if (itemNumber > number.length) {
+        if (number > drinkNumber.length) {
             System.out.println("Выберите номер из предложенного списка!");
         }
     }
