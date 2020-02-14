@@ -1,7 +1,5 @@
 package part1.lesson02.task01;
 
-import part1.lesson02.task01.Drink;
-
 import java.util.Scanner;
 
 public class VendingMachine {
