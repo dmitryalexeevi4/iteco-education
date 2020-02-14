@@ -46,9 +46,10 @@ public class VendingMachine {
                 System.out.println("Спасибо за покупку, ваша сдача: " + (money - drinks[i].getDrinkPrice()));
             } else if (number == drinks[i].getDrinkNumber() & money < drinks[i].getDrinkPrice()) {
                 System.out.println("Недостаточно средств, пополните счет на: " + (drinks[i].getDrinkPrice() - money));
-            } else if (number > drinks.length) {
-                System.out.println("Выберите номер из предложенного списка!");
             }
+        }
+        if (number > drinks.length) {
+            System.out.println("Выберите номер из предложенного списка!");
         }
     }
 }
