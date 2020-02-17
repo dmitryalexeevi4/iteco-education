@@ -5,34 +5,30 @@ import java.util.Scanner;
 //Арифметическая и геометрическая прогрессия
 public class Solution {
 
-    public static int n = 10;
+    private final static int n = 10;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите первое число: ");
-        int i = scanner.nextInt();
-        System.out.println("Введите второе число: ");
-        int j = scanner.nextInt();
-        arithmProg(i, j);
-        geomProg(i, j);
+        System.out.println("Введите число: ");
+        int a = scanner.nextInt();
+        System.out.println("Введите шаг: ");
+        int b = scanner.nextInt();
+        arithmProg(a, b);
+        geomProg(a, b);
     }
 
-    public static void arithmProg(int firstDigit, int secondDigit) {
-        int scannedDigit = firstDigit;
-        System.out.print("Арифметическая прогрессия: " + scannedDigit + " ");
-        for (firstDigit = scannedDigit; firstDigit < n; firstDigit++) {
-            System.out.print((firstDigit + secondDigit) + " ");
-            secondDigit++;
+    private static void arithmProg(int digit, int step) {
+        System.out.print("Арифметическая прогрессия: ");
+        for (int i = 1; i <= n; i++) {
+            System.out.print((digit += step) + " ");
         }
         System.out.println();
     }
 
-    public static void geomProg(int firstDigit, int secondDigit) {
-        int thirdDigit = secondDigit;
-        System.out.print("Геометрическая прогрессия: " + firstDigit + " " + secondDigit + " ");
-        for (int i = thirdDigit; i < n; i++) {
-            System.out.print(((firstDigit * secondDigit) * thirdDigit) + " ");
-            thirdDigit *= secondDigit;
+    private static void geomProg(int digit, int step) {
+        System.out.print("Геометрическая прогрессия: ");
+        for (int i = 1; i <= n; i++) {
+            System.out.print((digit *= step) + " ");
         }
         System.out.println();
     }
