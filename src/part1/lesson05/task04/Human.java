@@ -6,4 +6,12 @@ abstract class Human implements Runnable, Swimmable {
     String getName() {
         return this.name;
     }
+
+    public void run() {
+        System.out.println(this.getName() + " бежит");
+    }
+
+    public void swim() {
+        System.out.println(this.getName() + " плывет");
+    }
 }

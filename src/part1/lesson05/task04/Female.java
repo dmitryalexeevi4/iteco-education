@@ -6,11 +6,7 @@ class Female extends Human {
     }
 
     public void run() {
-        System.out.println(this.getName() + " бежит");
-    }
-
-    public void swim() {
-        System.out.println(this.getName() + " плывет");
+        System.out.println(this.getName() + " бежит в умеренном темпе");
     }
 }
 
