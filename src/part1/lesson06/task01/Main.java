@@ -6,7 +6,6 @@ class Main {
         Person person = new Person("Dmitry", 24);
         Person person1 = new Person("Maria", 24);
 
-        System.out.println(PersonSuperComparator.nameComparator.compare(person, person1));
-        System.out.println(PersonSuperComparator.ageComparator.compare(person, person1));
+        PersonSuperComparator.сomparision(person, person1);
     }
 }
