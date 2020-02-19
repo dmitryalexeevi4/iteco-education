@@ -6,6 +6,6 @@ class Main {
         Person person = new Person("Dmitry", 24);
         Person person1 = new Person("Maria", 24);
 
-        new PersonComparator().сomparision(person, person1);
+        new PersonComparator().start(person, person1);
     }
 }

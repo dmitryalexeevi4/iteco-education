@@ -8,5 +8,5 @@ abstract class PersonSuperComparator implements Comparator {
         return 0;
     }
 
-    abstract void сomparision(Person o1, Person o2);
+    abstract void start(Person o1, Person o2);
 }

@@ -32,7 +32,7 @@ class PersonComparator extends PersonSuperComparator {
     };
 
     @Override
-    void сomparision(Person o1, Person o2) {
+    void start(Person o1, Person o2) {
         int nameComparision = nameComparator.compare(o1, o2);
         int ageComparision = ageComparator.compare(o1, o2);
         if (nameComparision == 0 & ageComparision == 0) {
