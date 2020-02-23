@@ -13,7 +13,7 @@ class PersonComparator extends PersonSuperComparator {
     private static final Comparator<Person> ageComparator = new Comparator<Person>() {
         @Override
         public int compare(Person o1, Person o2) {
-          return o1.getAge() < o2.getAge() ? -1 : o1.getAge() == o2.getAge() ? 0 : 1;
+          return Integer.compare(o1.getAge(), o2.getAge());
         }
     };
 
